@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>76D478A5-A806-4B35-A77C-FC0EDE166DD4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>EtiAndChen</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>35529202-8B02-44D0-AADF-16ADF796BADE</key>
+		<string>https://github.com/MindTheGap/WeddingParty.git</string>
+		<key>76CC0ADE-C352-44CF-BDFB-019FDE8D4622</key>
+		<string>https://github.com/facebook/three20.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WeddingParty/EtiAndChen.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>35529202-8B02-44D0-AADF-16ADF796BADE</key>
+		<string>../../..</string>
+		<key>76CC0ADE-C352-44CF-BDFB-019FDE8D4622</key>
+		<string>../../../../three20</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/MindTheGap/WeddingParty.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>35529202-8B02-44D0-AADF-16ADF796BADE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>76CC0ADE-C352-44CF-BDFB-019FDE8D4622</string>
+			<key>IDESourceControlWCCName</key>
+			<string>three20</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>35529202-8B02-44D0-AADF-16ADF796BADE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WeddingParty</string>
+		</dict>
+	</array>
+</dict>
+</plist>
