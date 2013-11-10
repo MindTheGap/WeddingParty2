@@ -94,7 +94,7 @@ NSString *const FBSessionStateChangedNotification =
 
 - (void)openSession
 {
-    [FBSession openActiveSessionWithReadPermissions:nil
+    [FBSession openActiveSessionWithReadPermissions:@[@"email"]
                                        allowLoginUI:YES
                                   completionHandler:
      ^(FBSession *session,

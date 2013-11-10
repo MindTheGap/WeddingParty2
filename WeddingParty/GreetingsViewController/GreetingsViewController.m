@@ -539,6 +539,7 @@
 
     MessageModelToServer *mm = [[MessageModelToServer alloc] init];
     mm.Type = RetreiveLastMessages;
+    mm.WeddingID = 1;
     mm.Email = [self email];
     
     NSString *jsonString = [mm toJSONString];
@@ -599,7 +600,7 @@
                          if ([[oldMsg view] isKindOfClass:[UILabel class]] == NO)
                              continue;
                          
-                         int greetingID = [greeting GreetingID];
+                         int greetingID = [greeting Greeting_ID];
                          int oldGreetingID = [oldMsg greetingID];
                          if (greetingID == oldGreetingID)
                          {

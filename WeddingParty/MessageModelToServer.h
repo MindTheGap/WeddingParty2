@@ -21,6 +21,7 @@ enum MessageTypeToServer {
 @property (strong, nonatomic) NSString* UserFirstName;
 @property (strong, nonatomic) NSString* UserLastName;
 @property (strong, nonatomic) NSString* DeviceToken;
+@property (assign, nonatomic) int       WeddingID;
 
 
 

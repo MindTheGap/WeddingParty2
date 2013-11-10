@@ -14,7 +14,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "__95-[MainLoggedInPageViewController application:didFailToRegisterForRemoteNotificationsWithError:]_block_invoke:MainLoggedInPageViewController.m">
+      </ContextState>
+      <ContextState
          contextName = "-[MainPicturePageViewController loginViewFetchedUserInfo:user:]:MainPicturePageViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[UIBubbleTableView tableView:cellForRowAtIndexPath:]:UIBubbleTableView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "((UILabel *)cell.data.view).text">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "-[UIBubbleTableView reloadData]:UIBubbleTableView.m">
@@ -34,12 +45,7 @@
          contextName = "-[MainLoggedInPageViewController viewWillAppear:]:MainLoggedInPageViewController.m">
       </ContextState>
       <ContextState
-         contextName = "-[UIBubbleTableView tableView:cellForRowAtIndexPath:]:UIBubbleTableView.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "((UILabel *)cell.data.view).text">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "-[JSONModel initWithDictionary:error:]:JSONModel.m">
       </ContextState>
       <ContextState
          contextName = "-[GreetingsViewController tableView:numberOfRowsInSection:]:GreetingsViewController.m">
@@ -60,6 +66,9 @@
       </ContextState>
       <ContextState
          contextName = "-[GreetingsViewController keyboardWasShown:]:GreetingsViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[JSONModel initWithString:usingEncoding:error:]:JSONModel.m">
       </ContextState>
       <ContextState
          contextName = "__44-[GreetingsViewController keyboardWasShown:]_block_invoke:GreetingsViewController.m">

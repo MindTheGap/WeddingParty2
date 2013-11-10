@@ -45,8 +45,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     NSLog(@"MainPicturePage - ViewWillAppear");
-    
-
 }
 
 - (void)viewDidLoad

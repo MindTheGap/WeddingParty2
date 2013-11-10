@@ -14,6 +14,7 @@
 #define kUserLastNameKey    @"UserLastName"
 #define kEmailKey           @"Email"
 #define kDeviceTokenKey     @"DeviceToken"
+#define kWeddingIDKey       @"WeddingID"
 
 - (void) encodeWithCoder:(NSCoder *)encoder {
 //    NSLog(@"MessageModelToServer encodeWithCoder");
@@ -22,6 +23,7 @@
     [encoder encodeObject:self.UserLastName     forKey:kUserLastNameKey];
     [encoder encodeObject:self.Email            forKey:kEmailKey];
     [encoder encodeObject:self.DeviceToken      forKey:kDeviceTokenKey];
+    [encoder encodeObject:[[NSNumber alloc] initWithInt:self.WeddingID] forKey:kWeddingIDKey];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
@@ -30,10 +32,11 @@
     NSString *UserLastName = [decoder decodeObjectForKey:kUserLastNameKey];
     NSString *Email = [decoder decodeObjectForKey:kEmailKey];
     NSString *DeviceToken = [decoder decodeObjectForKey:kDeviceTokenKey];
-    return [self initWithEmail:Email userFirstName:UserFirstName userLastName:UserLastName deviceToken:DeviceToken];
+    NSNumber *WeddingIDNumber = [decoder decodeObjectForKey:kWeddingIDKey];
+    return [self initWithEmail:Email userFirstName:UserFirstName userLastName:UserLastName deviceToken:DeviceToken weddingID:[WeddingIDNumber intValue]];
 }
 
-- (id)initWithEmail:(NSString *)email userFirstName:(NSString *)userFirstName userLastName:(NSString *)userLastName deviceToken:(NSString *)deviceToken
+- (id)initWithEmail:(NSString *)email userFirstName:(NSString *)userFirstName userLastName:(NSString *)userLastName deviceToken:(NSString *)deviceToken weddingID:(int)weddingID
 {
 //    NSLog(@"MessageModelToServer initWithData");
 
@@ -41,6 +44,7 @@
     self.UserFirstName = userFirstName;
     self.UserLastName = userLastName;
     self.DeviceToken = deviceToken;
+    self.WeddingID = weddingID;
     return self;
 }
 

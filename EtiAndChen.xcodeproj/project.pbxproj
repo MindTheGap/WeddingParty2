@@ -116,6 +116,8 @@
 		769560811769D12400F35507 /* heartlike.png in Resources */ = {isa = PBXBuildFile; fileRef = 769560801769D12400F35507 /* heartlike.png */; };
 		76DBF2DF176CE921005F039E /* TopHitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DBF2DE176CE921005F039E /* TopHitsViewController.m */; };
 		76DBF4C9182ABEC700B9CB89 /* Greeting.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DBF4C8182ABEC700B9CB89 /* Greeting.m */; };
+		76DBF4CD182FA01000B9CB89 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DBF4CC182FA01000B9CB89 /* Comment.m */; };
+		76DBF4D0182FA05000B9CB89 /* Like.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DBF4CF182FA05000B9CB89 /* Like.m */; };
 		76E434021769DED600FB8991 /* NSBubbleData.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E433F81769DED600FB8991 /* NSBubbleData.m */; };
 		76E434031769DED600FB8991 /* UIBubbleHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E433FA1769DED600FB8991 /* UIBubbleHeaderTableViewCell.m */; };
 		76E434041769DED600FB8991 /* UIBubbleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E433FC1769DED600FB8991 /* UIBubbleTableView.m */; };
@@ -448,6 +450,10 @@
 		76DBF2DE176CE921005F039E /* TopHitsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopHitsViewController.m; path = "Top Hits/TopHitsViewController.m"; sourceTree = "<group>"; };
 		76DBF4C7182ABEC700B9CB89 /* Greeting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Greeting.h; path = Models/Greeting.h; sourceTree = "<group>"; };
 		76DBF4C8182ABEC700B9CB89 /* Greeting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Greeting.m; path = Models/Greeting.m; sourceTree = "<group>"; };
+		76DBF4CB182FA01000B9CB89 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Comment.h; path = Models/Comment.h; sourceTree = "<group>"; };
+		76DBF4CC182FA01000B9CB89 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Comment.m; path = Models/Comment.m; sourceTree = "<group>"; };
+		76DBF4CE182FA05000B9CB89 /* Like.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Like.h; path = Models/Like.h; sourceTree = "<group>"; };
+		76DBF4CF182FA05000B9CB89 /* Like.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Like.m; path = Models/Like.m; sourceTree = "<group>"; };
 		76E433F71769DED600FB8991 /* NSBubbleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBubbleData.h; sourceTree = "<group>"; };
 		76E433F81769DED600FB8991 /* NSBubbleData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSBubbleData.m; sourceTree = "<group>"; };
 		76E433F91769DED600FB8991 /* UIBubbleHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBubbleHeaderTableViewCell.h; sourceTree = "<group>"; };
@@ -802,8 +808,19 @@
 			children = (
 				76DBF4C7182ABEC700B9CB89 /* Greeting.h */,
 				76DBF4C8182ABEC700B9CB89 /* Greeting.m */,
+				76DBF4CB182FA01000B9CB89 /* Comment.h */,
+				76DBF4CC182FA01000B9CB89 /* Comment.m */,
+				76DBF4CE182FA05000B9CB89 /* Like.h */,
+				76DBF4CF182FA05000B9CB89 /* Like.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		76DBF4CA182BDE8800B9CB89 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		76E433F61769DE7F00FB8991 /* UIBubbleTableView */ = {
@@ -871,6 +888,7 @@
 		76ED33381746182C00072A23 /* EtiAndChen */ = {
 			isa = PBXGroup;
 			children = (
+				76DBF4CA182BDE8800B9CB89 /* Helpers */,
 				76DBF4C6182ABEA200B9CB89 /* Models */,
 				7695607C1769CAE600F35507 /* Toast */,
 				76F2531E175DBE4A00E94BCF /* JSONModel */,
@@ -1400,6 +1418,8 @@
 				76F25338175DBE4B00E94BCF /* JSONModel.m in Sources */,
 				76F25339175DBE4B00E94BCF /* JSONModelArray.m in Sources */,
 				76F2533A175DBE4B00E94BCF /* JSONModelClassProperty.m in Sources */,
+				76DBF4D0182FA05000B9CB89 /* Like.m in Sources */,
+				76DBF4CD182FA01000B9CB89 /* Comment.m in Sources */,
 				76F2533B175DBE4B00E94BCF /* JSONModelError.m in Sources */,
 				76F2533C175DBE4B00E94BCF /* NSArray+JSONModel.m in Sources */,
 				76F2533D175DBE4B00E94BCF /* JSONAPI.m in Sources */,

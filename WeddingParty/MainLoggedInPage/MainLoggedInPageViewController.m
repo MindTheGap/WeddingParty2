@@ -99,6 +99,65 @@
 	// Do any additional setup after loading the view.
     
     NSLog(@"LoggedOnFBPage - viewDidLoad");
+    
+    [self application:[UIApplication sharedApplication] didFailToRegisterForRemoteNotificationsWithError:nil];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    NSLog(@"Failed to register for remote notifications. error: %@", error);
+
+    WeddingPartyAppDelegate *appDelegate = (WeddingPartyAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    MessageModelToServer *mm = [[MessageModelToServer alloc] init];
+    mm.Email = [appDelegate Email];
+    mm.UserFirstName = [appDelegate UserFirstName];
+    mm.UserLastName = [appDelegate UserLastName];
+    mm.DeviceToken = nil;
+    mm.WeddingID = 1;
+    mm.Type = Registration;
+    
+    NSString *jsonString = [mm toJSONString];
+    
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://109.65.61.100:4296/"]];
+    [request setValue:jsonString forHTTPHeaderField:@"json"];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:jsonData];
+    
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
+     {
+         if ([data length] > 0 && error == nil)
+         {
+             NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF16LittleEndianStringEncoding];
+             
+             MessageModelFromServer *messageModelFromServer = [[MessageModelFromServer alloc] initWithString:string error:nil];
+             
+             NSLog(@"Sent registration message, inspecting response from server");
+             
+             switch ([messageModelFromServer Type])
+             {
+                 case AOK: NSLog(@"server sent AOK"); break;
+                 case Error: NSLog(@"server sent error: %d",[messageModelFromServer ErrorType]); break;
+                 default: NSLog(@"server sent something else (not AOK)"); break;
+             }
+         }
+         else if ([data length] == 0 && error == nil)
+         {
+             NSLog(@"data length is zero and no error");
+         }
+         else if (error != nil && error.code == NSURLErrorTimedOut)
+         {
+             NSLog(@"error code is timed out");
+         }
+         else if (error != nil)
+         {
+             NSLog(@"error is: %@" , [error localizedDescription]);
+         }
+     }];
+
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
@@ -112,6 +171,7 @@
     mm.UserFirstName = [appDelegate UserFirstName];
     mm.UserLastName = [appDelegate UserLastName];
     mm.DeviceToken = [deviceToken description];
+    mm.WeddingID = 1;
     mm.Type = Registration;
     
     NSString *jsonString = [mm toJSONString];
